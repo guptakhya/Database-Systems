@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://bytes.usc.edu/cs585/f22-d-%2Da-%2Dt-%2Da/hw/HW3/OL/OL.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>OL</title>
+<script src="./OL_files/OpenLayers.js">
+</script>
+<style>
+#map {
+    width:400px;
+    height:400px;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="./OL_files/style.css"></head>
+
+<body>
+<div id="map" class="olMap"><div id="OpenLayers_Layer_Markers_20" dir="ltr" class="olLayerDiv" style="position: absolute; width: 100%; height: 100%; z-index: 330;"><img id="OL_Icon_22_innerImage" class="olAlphaImg" src="./OL_files/marker.png" style="position: relative; width: 21px; height: 25px;"></div></div></div><div id="OpenLayers_Control_Zoom_5" class="olControlZoom olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1004;"></div><div id="OpenLayers_Control_ArgParser_6" class="olControlArgParser olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1004;"></div></div></div>
+
+
+<script>
+// your JS code 
+
+// my data is a label/ID for what we store, which is the object stored in variable d, 
+// whose value is {"k1":[{"a":5, "b":-6}]}, which consists of a key called k1 
+// with an array as its value: [{"a":5, "b":-6}]
+var d = {"k1":[{"a":5, "b":-6}]};
+localStorage.setItem("myData",JSON.stringify(d));
+// you'd need to modify the above, to store all your points
+
+
+//next [presumably after closing the browser, and reloading our html]
+// we can fetch the stored data, just by supplying its key:
+var dataStored = JSON.parse(localStorage.getItem("myData"));
+// verify that we fetched our data correctly
+console.log(dataStored); 
+// we can iterate through our array [of points], like so:
+var a = dataStored.k1; // a will contain our array
+for(var indx in a) { // indx is 0,1,2...
+  console.log(a[indx]); // this could be a single point
+}
+
+// here's how to plot points on a map, using OpenLayers:
+// [this is code I mildly modified, from an existing source]
+function initMap() {
+        map = new OpenLayers.Map('map');
+        basemap = new OpenLayers.Layer.OSM("Simple OSM Map");
+        map.addLayer(basemap);
+        markers = new OpenLayers.Layer.Markers("Markers");
+        map.addLayer(markers);
+}// initMap()
+
+function addMarker(latitude, longitude) {
+        var lonLat = new OpenLayers.LonLat(longitude, latitude)
+            .transform(
+                new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                map.getProjectionObject() // to Spherical Mercator Projection
+        );
+        var point = new OpenLayers.Marker(lonLat);
+        markers.addMarker(point);
+        map.setCenter(lonLat, 8); // second arg is zoom level
+        //console.log(latitude + ", " + longitude);
+}// addMarker()
+
+
+// load and setup map layers
+initMap();
+
+// here's how to plot just ONE [lat,long] on the map! 
+addMarker(34.0324603,-118.2884722); // My Home
+addMarker(34.02158321527821,-118.28291448449981); // Leavy Library
+addMarker(34.02131133154659,-118.28236660895871); // Starbucks
+addMarker(34.0206042184198,-118.281260837025); // Entrance 3
+addMarker(34.02012448833484,-118.2832856137258); // Literatea Cafe
+addMarker(34.020550975335186,-118.28315975113577); // Doheny Library
+addMarker(34.02031627754463,-118.28515003732048); // TT Waterfall
+addMarker(34.020295334916774,-118.28609386487375); // RTCC Eatery
+addMarker(34.02057151176945,-118.28890223837678); // Viterbi Falls
+addMarker(34.01991298391342,-118.28875931217817); // Science Library
+addMarker(34.024368425524216,-118.28761626348192); // Lyon Entrance
+addMarker(34.02356651035173,-118.286467352345); // SCA Falls
+addMarker(34.02395249924811,-118.28541670052579); // KDC Entrance
+
+</script>
+
+
+
+</body></html>

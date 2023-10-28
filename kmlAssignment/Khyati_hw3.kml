@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+    <Style id="z1">
+    <IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+    </Style>
+    <Placemark><name>My Home</name>
+        <styleUrl>#z1</styleUrl><Point><coordinates>-118.2884722,34.0324603</coordinates></Point>
+    </Placemark>
+    <Folder>
+        <name>Leavy Library</name>
+        <Placemark><name>Leavy Library</name>
+            <styleUrl>#z1</styleUrl><Point><coordinates>-118.28291448449981,34.02158321527821</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>Starbucks</name>
+        <Placemark><name>Starbucks</name>
+            <styleUrl>#z1</styleUrl><Point><coordinates>-118.28236660895871,34.02131133154659</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>Entrance 3</name>
+        <Placemark><name>Entrance 3</name>
+            <styleUrl>#z1</styleUrl><Point><coordinates>-118.281260837025,34.0206042184198</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>Literatea Cafe</name>
+        <Placemark><name>Literatea Cafe</name>
+            <styleUrl>#z1</styleUrl><Point><coordinates>-118.2832856137258,34.02012448833484</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>Doheny Library</name>
+        <Placemark><name>Doheny Library</name>
+            <styleUrl>#z1</styleUrl><Point><coordinates>-118.28315975113577,34.020550975335186</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>TT Waterfall</name>
+        <Placemark><name>TT Waterfall</name>
+            <styleUrl>#z1</styleUrl><Point><coordinates>-118.28515003732048,34.02031627754463</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>RTCC Eatery</name>
+        <Placemark><name>RTCC Eatery</name>
+            <styleUrl>#z1</styleUrl><Point><coordinates>-118.28609386487375,34.020295334916774</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>Viterbi Falls</name>
+        <Placemark><name>Viterbi Falls</name>
+            <styleUrl>#z1</styleUrl><Point><coordinates>-118.28890223837678,34.02057151176945</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>Science Library</name>
+        <Placemark><name>Science Library</name>
+            <styleUrl>#z1</styleUrl><Point><coordinates>-118.28875931217817,34.01991298391342</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>Lyon Entrance</name>
+        <Placemark><name>Lyon Entrance</name>
+            <styleUrl>#z1</styleUrl><Point><coordinates>-118.28761626348192,34.024368425524216</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>SCA Falls</name>
+        <Placemark><name>SCA Falls</name>
+            <styleUrl>#z1</styleUrl><Point><coordinates>-118.286467352345,34.02356651035173</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>KDC Entrance</name>
+        <Placemark><name>KDC Entrance</name>
+            <styleUrl>#z1</styleUrl><Point><coordinates>-118.28541670052579,34.02395249924811</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>Polygon</name>
+        <Placemark>
+            <Polygon>
+                <extrude>1</extrude>
+                <altitudeMode>relativeToGround</altitudeMode>
+                <outerBoundaryIs>
+                    <LinearRing>
+                        <coordinates> -118.28875931217817,34.01991298391342,50 
+                        -118.28890223837678,34.02057151176945,50 
+                        -118.2884722,34.0324603,50 
+                        -118.281260837025,34.0206042184198,50 
+                        -118.2832856137258,34.02012448833484,50 
+                        -118.28875931217817,34.01991298391342,50
+                        </coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+    </Folder>
+
+    <Folder>
+        <name>Home-Lyon Line</name>
+        <Placemark>
+            <LineString>
+                <extrude>1</extrude>
+                <tessellate>1</tessellate>
+                <altitudeMode>relativeToGround</altitudeMode>
+                    <coordinates> -118.2884722,34.0324603,60 
+                    -118.28761626348192,34.024368425524216,60
+                    </coordinates> 
+            </LineString>
+            <Style> 
+                <LineStyle>  
+                    <color>#ffff0000</color>
+                </LineStyle> 
+            </Style>
+        </Placemark>
+    </Folder>
+
+    <Folder>
+        <name>Home-SCA Line</name>
+        <Placemark>
+            <LineString>
+                <extrude>1</extrude>
+                <tessellate>1</tessellate>
+                <altitudeMode>relativeToGround</altitudeMode>
+                    <coordinates> -118.2884722,34.0324603,60 
+                    -118.286467352345,34.02356651035173,60
+                    </coordinates>
+            </LineString>
+            <Style> 
+                <LineStyle>  
+                    <color>#ffff0000</color>
+                </LineStyle> 
+            </Style>
+        </Placemark>
+    </Folder>
+
+    <Folder>
+        <name>Home-KDC Line</name>
+        <Placemark>
+            <LineString>
+                <extrude>1</extrude>
+                <tessellate>1</tessellate>
+                <altitudeMode>relativeToGround</altitudeMode>
+                    <coordinates> -118.2884722,34.0324603,60 
+                    -118.28541670052579,34.02395249924811,60
+                    </coordinates>
+            </LineString>
+            <Style> 
+                <LineStyle>  
+                    <color>#ffff0000</color>
+                </LineStyle> 
+            </Style>
+        </Placemark>
+    </Folder>
+
+    <Folder>
+        <name>Home-Viterbi Line</name>
+        <Placemark>
+            <LineString>
+                <extrude>1</extrude>
+                <tessellate>1</tessellate>
+                <altitudeMode>relativeToGround</altitudeMode>
+                    <coordinates> -118.2884722,34.0324603,60 
+                    -118.28890223837678,34.02057151176945,60
+                    </coordinates>
+            </LineString>
+            <Style> 
+                <LineStyle>  
+                    <color>#ffff0000</color>
+                </LineStyle> 
+            </Style>
+        </Placemark>
+    </Folder>
+</Document></kml>
